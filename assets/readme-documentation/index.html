@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kernow | Wasson Cornwall</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 4px solid #FFD700; /* Golden accent */
+        }
+
+        nav {
+            background: #555;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-bottom: 2px solid #FFD700; /* Golden accent */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav .nav-link.active {
+            color: #FFD700; /* Golden accent on hover/active */
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+        }
+
+        main {
+            flex: 2;
+            background: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid #FFD700; /* Golden accent */
+        }
+
+        aside {
+            flex: 1;
+            background: #eee;
+            padding: 1rem;
+            border-radius: 4px;
+            border-right: 4px solid #FFD700; /* Golden accent */
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            border-top: 4px solid #FFD700; /* Golden accent */
+        }
+
+        /* Golden accent for carousel indicators */
+        .carousel-indicators [data-bs-target] {
+            background-color: #FFD700;
+        }
+
+        /* Golden accent for carousel controls */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: drop-shadow(0 0 2px #FFD700);
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Kernow | Wasson Cornwall</h1>
+        <p>Subtitle or tagline goes here</p>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Kernow | Wasson Cornwall</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Carousel Section -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+        style="max-width: 1200px; margin: 2rem auto;">
+
+        <style>
+            .carousel-caption-left {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            text-align: left;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            max-width: 40%;
+            }
+            @media (max-width: 800px) {
+            .carousel-caption-left {
+                left: 5%;
+                max-width: 90%;
+                padding: 0.5rem 1rem;
+            }
+            }
+        </style>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/id/1015/1200/400" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/1016/1200/400" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/id/1018/1200/400" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <main>
+            <h2>Why Visit Us</h2>
+            <p>Cornwall offers breathtaking coastal scenery, charming villages, and a rich cultural heritage. Enjoy stunning beaches, delicious local cuisine, and unique attractions like historic castles and gardens. Whether you love outdoor adventures or relaxing by the sea, Cornwall is the perfect destination for an unforgettable holiday.</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+                <!-- Transport Card -->
+                <div class="col">
+                    <div class="card h-100 border-warning">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Train in Cornwall">
+                        <div class="card-body">
+                            <h5 class="card-title">Transport / How to get to Cornwall</h5>
+                            <p class="card-text">Travel to Cornwall by train, car, coach, or plane. The Great Western Railway connects London and Cornwall, while Newquay Airport offers domestic flights. Major roads like the A30 provide easy car access.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Attractions Card -->
+                <div class="col">
+                    <div class="card h-100 border-warning">
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cornwall Attractions">
+                        <div class="card-body">
+                            <h5 class="card-title">Attractions / Events</h5>
+                            <p class="card-text">Discover the Eden Project, St Michael’s Mount, and Tintagel Castle. Enjoy local festivals, music events, and traditional Cornish celebrations throughout the year.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Beach / Surf Card -->
+                <div class="col">
+                    <div class="card h-100 border-warning">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cornwall Beach Surf">
+                        <div class="card-body">
+                            <h5 class="card-title">Beach / Surf</h5>
+                            <p class="card-text">Cornwall boasts world-famous beaches like Fistral and Porthcurno. Surf the Atlantic waves, relax on golden sands, or explore hidden coves along the stunning coastline.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accommodation Card -->
+                <div class="col">
+                    <div class="card h-100 border-warning">
+                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cornwall Accommodation">
+                        <div class="card-body">
+                            <h5 class="card-title">Accommodation</h5>
+                            <p class="card-text">Choose from cosy cottages, seaside hotels, family-friendly campsites, or luxury resorts. There’s something for every taste and budget in Cornwall.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cuisine Card -->
+                <div class="col">
+                    <div class="card h-100 border-warning">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Cornish Cuisine">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuisine</h5>
+                            <p class="card-text">Savour Cornish pasties, fresh seafood, and cream teas. Enjoy local produce at farmers’ markets and dine at award-winning restaurants across the region.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Additional info, links, or widgets go here.</p>
+        </aside>
+    </div>
+
+
+    <footer>
+        &copy; 2025 Kernow | Wasson Cornwall
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
